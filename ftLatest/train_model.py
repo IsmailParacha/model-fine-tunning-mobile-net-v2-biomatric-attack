@@ -1,3 +1,4 @@
+import os
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -280,7 +281,9 @@ def main():
     print("="*60)
     
     # Configuration
-    DATASET_PATH = "SCUT"  # CHANGE THIS TO YOUR PATH
+    DATASET_PATH = os.path.join("..", "data", "SCUT")
+    #DATASET_PATH = ".../data/SCUT" 
+    #  # CHANGE THIS TO YOUR PATH
     NUM_EPOCHS = 10
     BATCH_SIZE = 16
     LEARNING_RATE = 0.001
